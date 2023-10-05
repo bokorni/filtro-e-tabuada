@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bokas JIFC 2024</title>
+    <script>
+        function tabuada(){
+            const inputnum = document.getElementById('campo-numero');
+            const tabuada = document.getElementById('valor-form');
+            tabuada.innerHTML = '';
+
+            if (inputnum.value !== '') {
+                const num = parseInt(inputnum.value);
+                for (let i = 1; i <= 10; i++) {
+                    const result = numero * i;
+                    const mult = `${numero} x ${i} = ${result}<br>`;
+                    tabuada.innerHTML += mult;
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <form>
+       <input type="number" id="campo-numero" oninput="tabuada();"> 
+    </form>
+    <div id="valor-form"></div>
+</body>
+</html>

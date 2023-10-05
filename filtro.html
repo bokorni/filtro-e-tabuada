@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        function filtraLista() {
+            const filtro = document.getElementById("filtro").value.toLowerCase();
+            const lis = document.getElementsByTagName("li");
+
+            for (const li of lis) {
+                if (li.innerText.toLowerCase().startsWith(filtro)) {
+                    li.style.display = 'block';
+                    li.style.fontWeight = "bold"
+                } else {
+                    li.style.fontWeight = 'normal';
+                }
+            }
+        }
+    </script>
+    <style>
+        #valor-form {
+            font-size: 32px;
+            height: 100px;
+
+        }
+         
+    </style>
+</head>
+
+<body>
+    <form>
+
+
+    </form>
+    <div id="valor-form"></div>
+
+
+    <form>
+        <label for="">Filtro: </label>
+        <input type="text" id="filtro" oninput="filtraLista();">
+    </form>
+    <ul>
+
+        <li>João</li>
+        <li>Claudio</li>
+        <li>Marcio</li>
+
+    </ul>
+     <a href="tabuada.html">
+        <p>Tabuada</p>
+     </a> 
+</body>
+
+</html>
